@@ -31,25 +31,25 @@
     
     
     <entry>
-      <title>frist</title>
-      <link href="2021/01/22/frist/"/>
-      <url>2021/01/22/frist/</url>
+      <title>hexo+git一键部署到服务器</title>
+      <link href="2021/01/22/hexo-git-yi-jian-bu-shu-dao-fu-wu-qi/"/>
+      <url>2021/01/22/hexo-git-yi-jian-bu-shu-dao-fu-wu-qi/</url>
       
-        <content type="html"><![CDATA[<p>成功，ok</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> Markdown </category>
+          <category> hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Typora </tag>
+            <tag> hexo </tag>
             
-            <tag> Markdown </tag>
+            <tag> git </tag>
             
         </tags>
       
