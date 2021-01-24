@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客快速搭建教程, 杨Yang">
+    <meta name="keywords" content="MongoDB数据库的使用, 杨Yang">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客快速搭建教程 | 杨Yang</title>
+    <title>MongoDB数据库的使用 | 杨Yang</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/Swiper5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/doc1.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客快速搭建教程</h1>
+                    <h1 class="description center-align post-title">MongoDB数据库的使用</h1>
                 </div>
             </div>
         </div>
@@ -327,10 +327,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -339,12 +433,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/MongoDB/">
+                                <span class="chip bg-color">MongoDB</span>
                             </a>
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
                             </a>
                         
                     </div>
@@ -355,8 +453,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/MongoDB/" class="post-category">
+                                MongoDB
                             </a>
                         
                     </div>
@@ -368,7 +466,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-22
+                    2021-01-24
                 </div>
                 
 
@@ -377,14 +475,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    802
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -404,7 +502,86 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="MongoDB数据库的使用"><a href="#MongoDB数据库的使用" class="headerlink" title="MongoDB数据库的使用"></a>MongoDB数据库的使用</h1><h2 id="1-关系型数据库和非关系型数据库"><a href="#1-关系型数据库和非关系型数据库" class="headerlink" title="1.关系型数据库和非关系型数据库"></a>1.关系型数据库和非关系型数据库</h2><p>表就是关系，或者说表与表之间存在关系。</p>
+<ul>
+<li>所有的关系型数据库都需要通过sql语言来操作</li>
+<li>所有的关系型数据库在操作之前都需要设计表结构</li>
+</ul>
+<h2 id="2-MongoDB数据库"><a href="#2-MongoDB数据库" class="headerlink" title="2.MongoDB数据库"></a>2.MongoDB数据库</h2><ul>
+<li>官网：<a target="_blank" rel="noopener" href="https://www.mongodb.com/">https://www.mongodb.com/</a></li>
+<li>中文网：<a target="_blank" rel="noopener" href="https://www.mongodb.org.cn/">https://www.mongodb.org.cn/</a></li>
+<li>下载网址：<a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download">https://www.mongodb.com/try/download</a></li>
+<li>安装教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-window-install.html">https://www.runoob.com/mongodb/mongodb-window-install.html</a></li>
+</ul>
+<h2 id="3-启动和关闭MongoDB数据库"><a href="#3-启动和关闭MongoDB数据库" class="headerlink" title="3.启动和关闭MongoDB数据库"></a>3.启动和关闭MongoDB数据库</h2><p>启动：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">mongodb默认使用执行mongod命令所处盘符根目录下的/data/db 作为自己的数据存储目录</span></span><br><span class="line">mongod</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果想要修改默认的数据库存储目录，可以：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath=数据存储目录路径</span><br></pre></td></tr></tbody></table></figure>
+
+<p>停止：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在开启服务的控制台，直接ctrl+c即可停止。</span><br><span class="line">或直接关闭开启服务的控制台也可以。</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="4-连接数据库"><a href="#4-连接数据库" class="headerlink" title="4.连接数据库"></a>4.连接数据库</h2><p>连接：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">改命令默认连接本机的mongodb服务</span></span><br><span class="line">mongo</span><br></pre></td></tr></tbody></table></figure>
+
+<p>退出：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在连接状态输入<span class="built_in">exit</span>即可退出</span></span><br><span class="line">exit</span><br></pre></td></tr></tbody></table></figure>
+
+<p>基本命令</p>
+<ul>
+<li><p><code>show dbs</code></p>
+<ul>
+<li>查看数据库列表</li>
+</ul>
+</li>
+<li><p><code>db</code></p>
+<ul>
+<li>查看当前操作的数据库</li>
+</ul>
+</li>
+<li><p><code>use 数据库名称</code></p>
+<ul>
+<li>切换到指定的数据库</li>
+</ul>
+</li>
+<li><p><code>插入数据 db.数据表名称.insert{("name":ayng)} </code></p>
+<ul>
+<li>向数据表中插入一条数据</li>
+</ul>
+</li>
+<li><p><code>show collections</code></p>
+<ul>
+<li>显示当前数据表集合</li>
+</ul>
+</li>
+<li><p><code>db.数据表名称.find()</code></p>
+<ul>
+<li>查找数据表里所有的数据，显示出来了我们插入的数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="mongoose对数据库进行操作"><a href="#mongoose对数据库进行操作" class="headerlink" title="mongoose对数据库进行操作"></a>mongoose对数据库进行操作</h2><ul>
+<li>官网: <a target="_blank" rel="noopener" href="https://mongoosejs.com/">https://mongoosejs.com/</a></li>
+<li>中文网: <a target="_blank" rel="noopener" href="http://www.mongoosejs.net/">http://www.mongoosejs.net/</a></li>
+</ul>
+<h3 id="1-起步"><a href="#1-起步" class="headerlink" title="1.起步"></a>1.起步</h3><p>安装：</p>
+<p><code>npm i mongoose</code></p>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="comment">//连接MongoDB数据库</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设计数据库</span></span><br><span class="line"><span class="comment">//MongoDB是动态的，非常灵活，只需要在代码中设计你的数据库就可以了</span></span><br><span class="line"><span class="keyword">const</span> Cat = mongoose.model(<span class="string">'Cat'</span>, { <span class="attr">name</span>: <span class="built_in">String</span> });</span><br><span class="line"><span class="comment">//实例化一个cat</span></span><br><span class="line"><span class="keyword">const</span> kitty = <span class="keyword">new</span> Cat({<span class="string">"name"</span>:<span class="string">"Zildjian"</span>});	<span class="comment">//这里会直接把大写转小写加复数，所以查询为：db.cats.find()</span></span><br><span class="line"><span class="comment">//持久化保存kitty实例</span></span><br><span class="line">kitty.save().then(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'meow'</span>)).catch(<span class="function"><span class="params">err</span> =&gt;</span>{<span class="built_in">console</span>.log(<span class="string">'保存失败'</span>);});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>结果:<img src="https://img-blog.csdnimg.cn/2021012416223026.png#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="2-设计表结构"><a href="#2-设计表结构" class="headerlink" title="2.设计表结构"></a>2.设计表结构</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="comment">//连接MongoDB数据库</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="comment">//设计集合结构（表结构）</span></span><br><span class="line"><span class="comment">//字段名称就是表结构中的属性名称</span></span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="keyword">new</span> Schema({</span><br><span class="line"> title: <span class="built_in">String</span>,</span><br><span class="line"> author: <span class="built_in">String</span>,</span><br><span class="line"> body:  <span class="built_in">String</span>,</span><br><span class="line">});</span><br><span class="line"><span class="comment">/* 将文档结构发布为模型</span></span><br><span class="line"><span class="comment">*   mongoose.model 方法就是用来将一个架构发布为model</span></span><br><span class="line"><span class="comment">*  第一个参数:传入一个大写名词单数字符串用来表示你的数据库名称</span></span><br><span class="line"><span class="comment">*   mongoose会自动将大写名词的字符串生成小写复数的集合名称</span></span><br><span class="line"><span class="comment">*  第二个参数：架构Schema </span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="keyword">var</span> Blog = mongoose.model(<span class="string">'Blog'</span>, blogSchema);</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-新增数据"><a href="#3-新增数据" class="headerlink" title="3.新增数据"></a>3.新增数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用构造函数对blog集合中的数据操作</span></span><br><span class="line"><span class="keyword">var</span> myblog = <span class="keyword">new</span> Blog({</span><br><span class="line">  title:<span class="string">'新增数据'</span>,</span><br><span class="line">  author:<span class="string">'Yang'</span>,</span><br><span class="line">  body:<span class="string">'使用构造函数对blog集合中的数据操作'</span></span><br><span class="line">})</span><br><span class="line">myblog.save().then(<span class="function">() =&gt;</span>{<span class="built_in">console</span>.log(<span class="string">'保存成功'</span>);}).catch(<span class="function">(<span class="params">err</span>) =&gt;</span>{<span class="built_in">console</span>.log(err);})</span><br></pre></td></tr></tbody></table></figure>
+<p>结果：<br><img src="https://img-blog.csdnimg.cn/20210124163247107.png#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Blog.find(<span class="function"><span class="keyword">function</span> (<span class="params">err,ret</span>) </span>{</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">err</span>)</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'查询失败'</span>);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(ret);</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>结果:<br><img src="https://img-blog.csdnimg.cn/20210124164018566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="6-更新数据"><a href="#6-更新数据" class="headerlink" title="6.更新数据"></a>6.更新数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新数据  传入对象id</span></span><br><span class="line">Blog.findByIdAndUpdate(<span class="string">'600d34c67bdce30fd032ead1'</span>,{</span><br><span class="line">    title:<span class="string">'更新数据'</span></span><br><span class="line">},<span class="function"><span class="keyword">function</span> (<span class="params">err,ret</span>) </span>{</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">err</span>)</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'更新失败'</span>);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'更新成功'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(ret);</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>结果：<br><img src="https://img-blog.csdnimg.cn/20210124165425541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+
                 
             </div>
             <hr/>
@@ -430,7 +607,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ungin.cn/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/">http://ungin.cn/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/</a>
+                    <a href="http://ungin.cn/2021/01/24/mongodb-shu-ju-ku-de-shi-yong/">http://ungin.cn/2021/01/24/mongodb-shu-ju-ku-de-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -468,12 +645,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/MongoDB/">
+                                    <span class="chip bg-color">MongoDB</span>
                                 </a>
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
                                 </a>
                             
                         </div>
@@ -517,9 +698,67 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/01/24/mongodb-shu-ju-ku-de-shi-yong/">
+                    <div class="card-image">
+                        
+                        <img src="/images/doc1.png" class="responsive-img" alt="MongoDB数据库的使用">
+                        
+                        <span class="card-title">MongoDB数据库的使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MongoDB/" class="post-category">
+                                    MongoDB
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MongoDB/">
+                        <span class="chip bg-color">MongoDB</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/01/23/css-qing-song-xie-chu-meng-huan-xi-you-dong-hua-xiao-guo/">
                     <div class="card-image">
@@ -536,9 +775,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -560,59 +799,6 @@
                     
                     <a href="/tags/html/">
                         <span class="chip bg-color">html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/">
-                    <div class="card-image">
-                        
-                        <img src="/images/Swiper5.jpg" class="responsive-img" alt="博客快速搭建教程">
-                        
-                        <span class="card-title">博客快速搭建教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            hexo+git一键部署到服务器,实现当前博客效果.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -644,6 +830,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
