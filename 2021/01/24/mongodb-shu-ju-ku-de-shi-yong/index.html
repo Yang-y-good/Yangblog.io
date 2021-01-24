@@ -31,7 +31,8 @@
 
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -475,7 +476,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    802
+                    800
                 </div>
                 
 
@@ -514,20 +515,19 @@
 <li>安装教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-window-install.html">https://www.runoob.com/mongodb/mongodb-window-install.html</a></li>
 </ul>
 <h2 id="3-启动和关闭MongoDB数据库"><a href="#3-启动和关闭MongoDB数据库" class="headerlink" title="3.启动和关闭MongoDB数据库"></a>3.启动和关闭MongoDB数据库</h2><p>启动：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">mongodb默认使用执行mongod命令所处盘符根目录下的/data/db 作为自己的数据存储目录</span></span><br><span class="line">mongod</span><br></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell">#mongodb默认使用执行mongod命令所处盘符根目录下的/data/db 作为自己的数据存储目录
+mongod<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>如果想要修改默认的数据库存储目录，可以：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath=数据存储目录路径</span><br></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell">mongod --dbpath=数据存储目录路径<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>停止：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在开启服务的控制台，直接ctrl+c即可停止。</span><br><span class="line">或直接关闭开启服务的控制台也可以。</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code>在开启服务的控制台，直接ctrl+c即可停止。
+或直接关闭开启服务的控制台也可以。</code></pre>
 <h2 id="4-连接数据库"><a href="#4-连接数据库" class="headerlink" title="4.连接数据库"></a>4.连接数据库</h2><p>连接：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">改命令默认连接本机的mongodb服务</span></span><br><span class="line">mongo</span><br></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell">#改命令默认连接本机的mongodb服务
+mongo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>退出：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在连接状态输入<span class="built_in">exit</span>即可退出</span></span><br><span class="line">exit</span><br></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell">#在连接状态输入exit即可退出
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>基本命令</p>
 <ul>
 <li><p><code>show dbs</code></p>
@@ -568,18 +568,63 @@
 <h3 id="1-起步"><a href="#1-起步" class="headerlink" title="1.起步"></a>1.起步</h3><p>安装：</p>
 <p><code>npm i mongoose</code></p>
 <p>示例：</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="comment">//连接MongoDB数据库</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设计数据库</span></span><br><span class="line"><span class="comment">//MongoDB是动态的，非常灵活，只需要在代码中设计你的数据库就可以了</span></span><br><span class="line"><span class="keyword">const</span> Cat = mongoose.model(<span class="string">'Cat'</span>, { <span class="attr">name</span>: <span class="built_in">String</span> });</span><br><span class="line"><span class="comment">//实例化一个cat</span></span><br><span class="line"><span class="keyword">const</span> kitty = <span class="keyword">new</span> Cat({<span class="string">"name"</span>:<span class="string">"Zildjian"</span>});	<span class="comment">//这里会直接把大写转小写加复数，所以查询为：db.cats.find()</span></span><br><span class="line"><span class="comment">//持久化保存kitty实例</span></span><br><span class="line">kitty.save().then(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'meow'</span>)).catch(<span class="function"><span class="params">err</span> =&gt;</span>{<span class="built_in">console</span>.log(<span class="string">'保存失败'</span>);});</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//连接MongoDB数据库</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'mongodb://localhost/test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+<span class="token comment" spellcheck="true">//设计数据库</span>
+<span class="token comment" spellcheck="true">//MongoDB是动态的，非常灵活，只需要在代码中设计你的数据库就可以了</span>
+<span class="token keyword">const</span> Cat <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> String <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//实例化一个cat</span>
+<span class="token keyword">const</span> kitty <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"Zildjian"</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//这里会直接把大写转小写加复数，所以查询为：db.cats.find()</span>
+<span class="token comment" spellcheck="true">//持久化保存kitty实例</span>
+kitty<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'meow'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'保存失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>结果:<img src="https://img-blog.csdnimg.cn/2021012416223026.png#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="2-设计表结构"><a href="#2-设计表结构" class="headerlink" title="2.设计表结构"></a>2.设计表结构</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="comment">//连接MongoDB数据库</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="comment">//设计集合结构（表结构）</span></span><br><span class="line"><span class="comment">//字段名称就是表结构中的属性名称</span></span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="keyword">new</span> Schema({</span><br><span class="line"> title: <span class="built_in">String</span>,</span><br><span class="line"> author: <span class="built_in">String</span>,</span><br><span class="line"> body:  <span class="built_in">String</span>,</span><br><span class="line">});</span><br><span class="line"><span class="comment">/* 将文档结构发布为模型</span></span><br><span class="line"><span class="comment">*   mongoose.model 方法就是用来将一个架构发布为model</span></span><br><span class="line"><span class="comment">*  第一个参数:传入一个大写名词单数字符串用来表示你的数据库名称</span></span><br><span class="line"><span class="comment">*   mongoose会自动将大写名词的字符串生成小写复数的集合名称</span></span><br><span class="line"><span class="comment">*  第二个参数：架构Schema </span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="keyword">var</span> Blog = mongoose.model(<span class="string">'Blog'</span>, blogSchema);</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="3-新增数据"><a href="#3-新增数据" class="headerlink" title="3.新增数据"></a>3.新增数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用构造函数对blog集合中的数据操作</span></span><br><span class="line"><span class="keyword">var</span> myblog = <span class="keyword">new</span> Blog({</span><br><span class="line">  title:<span class="string">'新增数据'</span>,</span><br><span class="line">  author:<span class="string">'Yang'</span>,</span><br><span class="line">  body:<span class="string">'使用构造函数对blog集合中的数据操作'</span></span><br><span class="line">})</span><br><span class="line">myblog.save().then(<span class="function">() =&gt;</span>{<span class="built_in">console</span>.log(<span class="string">'保存成功'</span>);}).catch(<span class="function">(<span class="params">err</span>) =&gt;</span>{<span class="built_in">console</span>.log(err);})</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-设计表结构"><a href="#2-设计表结构" class="headerlink" title="2.设计表结构"></a>2.设计表结构</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//连接MongoDB数据库</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'mongodb://localhost/test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> Schema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>Schema<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//设计集合结构（表结构）</span>
+<span class="token comment" spellcheck="true">//字段名称就是表结构中的属性名称</span>
+<span class="token keyword">var</span> blogSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ title<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+ author<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+ body<span class="token punctuation">:</span>  String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* 将文档结构发布为模型
+*   mongoose.model 方法就是用来将一个架构发布为model
+*  第一个参数:传入一个大写名词单数字符串用来表示你的数据库名称
+*   mongoose会自动将大写名词的字符串生成小写复数的集合名称
+*  第二个参数：架构Schema 
+**/</span>
+<span class="token keyword">var</span> Blog <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Blog'</span><span class="token punctuation">,</span> blogSchema<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-新增数据"><a href="#3-新增数据" class="headerlink" title="3.新增数据"></a>3.新增数据</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//使用构造函数对blog集合中的数据操作</span>
+<span class="token keyword">var</span> myblog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blog</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span><span class="token string">'新增数据'</span><span class="token punctuation">,</span>
+  author<span class="token punctuation">:</span><span class="token string">'Yang'</span><span class="token punctuation">,</span>
+  body<span class="token punctuation">:</span><span class="token string">'使用构造函数对blog集合中的数据操作'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+myblog<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'保存成功'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>结果：<br><img src="https://img-blog.csdnimg.cn/20210124163247107.png#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Blog.find(<span class="function"><span class="keyword">function</span> (<span class="params">err,ret</span>) </span>{</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">err</span>)</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'查询失败'</span>);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(ret);</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-
+<h3 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h3><pre class="line-numbers language-javascript"><code class="language-javascript">Blog<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span>ret<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'查询失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>结果:<br><img src="https://img-blog.csdnimg.cn/20210124164018566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="6-更新数据"><a href="#6-更新数据" class="headerlink" title="6.更新数据"></a>6.更新数据</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新数据  传入对象id</span></span><br><span class="line">Blog.findByIdAndUpdate(<span class="string">'600d34c67bdce30fd032ead1'</span>,{</span><br><span class="line">    title:<span class="string">'更新数据'</span></span><br><span class="line">},<span class="function"><span class="keyword">function</span> (<span class="params">err,ret</span>) </span>{</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">err</span>)</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'更新失败'</span>);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'更新成功'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(ret);</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-
+<h3 id="6-更新数据"><a href="#6-更新数据" class="headerlink" title="6.更新数据"></a>6.更新数据</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//更新数据  传入对象id</span>
+Blog<span class="token punctuation">.</span><span class="token function">findByIdAndUpdate</span><span class="token punctuation">(</span><span class="token string">'600d34c67bdce30fd032ead1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span><span class="token string">'更新数据'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span>ret<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'更新失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'更新成功'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>结果：<br><img src="https://img-blog.csdnimg.cn/20210124165425541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 
                 
@@ -813,23 +858,7 @@
 
 
 
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
+<!-- 代码块功能依赖 --> <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> <!-- 代码语言 -->  <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>  <!-- 代码块复制 -->  <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>  <!-- 代码块收缩 -->  <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>  <!-- 代码块折行 -->  <style type="text/css"> code[class*="language-"], pre[class*="language-"] { white-space: pre !important; } </style> 
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -997,7 +1026,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.9k</span>&nbsp;字
+                class="white-color">1.8k</span>&nbsp;字
             
             
             
