@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客快速搭建教程, 杨Yang">
+    <meta name="keywords" content="hexo+GitHub Pages一键搭建部署博客, 杨Yang">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客快速搭建教程 | 杨Yang</title>
+    <title>hexo+GitHub Pages一键搭建部署博客 | 杨Yang</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/Swiper5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/hexo-github%20pages.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客快速搭建教程</h1>
+                    <h1 class="description center-align post-title">hexo+GitHub Pages一键搭建部署博客</h1>
                 </div>
             </div>
         </div>
@@ -348,6 +348,14 @@
                                 <span class="chip bg-color">git</span>
                             </a>
                         
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
+                            </a>
+                        
+                            <a href="/tags/github-pages/">
+                                <span class="chip bg-color">github pages</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -369,7 +377,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-22
+                    2021-01-25
                 </div>
                 
 
@@ -378,14 +386,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    970
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -405,7 +413,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
+
+
+<hr style=" border:solid; width:100px; height:1px;" color="#000000" size="1&quot;">
+
+<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>现在技术更新迭代是非常的快，尤其是web方面！所以当前搭建一个博客差不多有手就行，这里我们用到hexo进行博客的一键生成和部署。我自己的博客也是用hexo搭建的：<a target="_blank" rel="noopener" href="https://www.ungin.cn/">杨Yang
+</a></p>
+<h3 id="博客相关配置"><a href="#博客相关配置" class="headerlink" title="博客相关配置"></a><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">博客相关配置</a></h3><h3 id="matery主题相关配置"><a href="#matery主题相关配置" class="headerlink" title="matery主题相关配置"></a><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matery主题相关配置</a></h3><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1. 什么是 Hexo？"></a>1. 什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a>    </p>
+<h2 id="2-准备工作："><a href="#2-准备工作：" class="headerlink" title="2. 准备工作："></a>2. 准备工作：</h2><p>安装Git：<br>Windows：下载并安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>。<br>Mac：使用<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>，<a target="_blank" rel="noopener" href="https://www.macports.org/">MacPorts</a>或<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/git-osx-installer/">installer</a>安装。</p>
+<p>安装Node.js:<br>Node.js下载官网:<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a></p>
+<p>安装hexo:<br>用管理员身份打开cmd输入：<code>npm install hexo-cli -g</code><br>输入<code>hexo -version</code>可查看版本信息。</p>
+<h2 id="3-生成博客"><a href="#3-生成博客" class="headerlink" title="3. 生成博客"></a>3. 生成博客</h2><p>在你需要放置博客文件的目录下新建一个文件，新建完成之后点进去，在空白处鼠标右键单击一下，可以看到多了俩个选项(前提必须要先安装Git)，这里点击下面那个git bash here打开控制台。<br><img src="https://img-blog.csdnimg.cn/2021012513531925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ul>
+<li>初始化hexo：输入命令 <code>hexo init</code>  这里可以看到文件夹里面会自动生成一些文件</li>
+<li>安装依赖：<code>npm intsall</code> 如果git报权限不足可以用管理员身份运行cmd进行安装</li>
+<li>本地运行hexo：<code>hexo s</code> s是server的缩写，这时我们在浏览器输入：<code>http://localhost:4000/</code>就可以看到搭建的博客。</li>
+<li><strong>到这里是不是非常简单，原界面有些简陋，我们可以更换下主题</strong>。<br><img src="https://img-blog.csdnimg.cn/20210125141325649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><h2 id="4-更换主题"><a href="#4-更换主题" class="headerlink" title="4. 更换主题"></a>4. 更换主题</h2></li>
+</ul>
+<p><strong>主题官网有很多，我这里使用的是：<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">matery</a> 主题</strong></p>
+<ul>
+<li>将下载好的主题解压至博客文件的themes文件夹内，重命名为为：matery（<strong>名字可以随意更改</strong>）</li>
+<li>随后打开博客根目录的_config.yml配置文件，找到theme，<strong>将名字改成上面修改过的文件名</strong><br><img src="https://img-blog.csdnimg.cn/20210125142811794.png" alt="在这里插入图片描述"></li>
+<li>  再次运行命令 <code>hexo g</code> &amp;&amp; <code>hexo hexo s</code>  可以看到主题已经更换成功了。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210125143204920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">  </p>
+<h2 id="5-部署到github-pages"><a href="#5-部署到github-pages" class="headerlink" title="5. 部署到github pages"></a>5. 部署到github pages</h2><p> <strong>1. 登陆github账号，新建一个存储库，库名必须要是：<code>user.github.io</code> <strong>user就是你的用户名,这是github规定的。</strong></strong><br><img src="https://img-blog.csdnimg.cn/20210125144902547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>填好之后点击创建。<br> 2. 创建完成后会有两个链接，https和ssh协议，防止后续提交连续输入密码，<strong>我们使用ssh连接github</strong><br> 3. 打开Git Bash。输入<code>ls -al ~/.ssh</code>以查看是否存在现有的SSH密钥：如果没有出现列表文件则需要生成一个新的ssh秘钥<img src="https://img-blog.csdnimg.cn/20210125150338986.png#pic_center" alt="在这里插入图片描述"><br> <strong>4. 生成新的SSH密钥</strong><br>      - 如果之前没有使用过git，则需要配置一下本地账户：<br>      - <code>git config --global user.name "用户名"</code><br>      <code>git config --global user.email "邮箱地址"</code><br>    - 然后开始生成密钥 SSH key<br>       <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code> 替换为您的GitHub电子邮件地址。<br>     - 打开id_ed25519.pubwen文件，这里面存的是公钥，将内容全部复制。<br>     - 在github设置找到ssh秘钥，标题随便写，将公钥粘贴到下面点击添加<br>     <img src="https://img-blog.csdnimg.cn/2021012515171057.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>5. 测试是ssh是否连接成功</strong><br>     - 输入以下内容：<code>ssh -T git@github.com</code><br>     - 看到 <code>Hi Yang-y-good! You've successfully authenticated, but GitHub does not provide shell access. </code>代表连接成功了。（看到警告输入 yes即可）</p>
+<p><strong>6. 上传到github</strong></p>
+<ul>
+<li>安装依赖    <code>npm install hexo-deployer-git --save</code></li>
+<li>打开博客根目录的_config.yml修改配置：<img src="https://img-blog.csdnimg.cn/20210125153105996.png#pic_center" alt="在这里插入图片描述"></li>
+<li>执行 <code> hexo clean &amp;&amp; hexo deploy。</code></li>
+</ul>
+<p><strong>7. <strong>最后在项目的设置里面往下滑找到pages更改为master分支点击save保存，库名就是你的博客网网址了: <a target="_blank" rel="noopener" href="https://yang-y-good.github.io/">https://yang-y-good.github.io/</a>**</strong></strong>（由于github服务器在国外，国内访问速度偏慢）**。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210125153539223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210125153456231.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3Mjg1Mg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><font color="#999AAA">以上就是今天要讲的内容，本文仅仅简单介绍了hexo的使用，而hexo还提供很多种便捷的部署方式。</font></p><font color="#999AAA">
+</font>
                 
             </div>
             <hr/>
@@ -431,7 +476,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ungin.cn/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/">http://ungin.cn/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/</a>
+                    <a href="http://ungin.cn/2021/01/25/hexo-github-pages-yi-jian-da-jian-bu-shu-bo-ke/">http://ungin.cn/2021/01/25/hexo-github-pages-yi-jian-da-jian-bu-shu-bo-ke/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -477,6 +522,14 @@
                                     <span class="chip bg-color">git</span>
                                 </a>
                             
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
+                                </a>
+                            
+                                <a href="/tags/github-pages/">
+                                    <span class="chip bg-color">github pages</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -518,68 +571,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2021/01/23/css-qing-song-xie-chu-meng-huan-xi-you-dong-hua-xiao-guo/">
-                    <div class="card-image">
-                        
-                        <img src="/images/doc1.png" class="responsive-img" alt="css轻松写出梦幻西游动画效果">
-                        
-                        <span class="card-title">css轻松写出梦幻西游动画效果</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            css3动画效果
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/css/" class="post-category">
-                                    css
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
-                    </a>
-                    
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/01/22/bo-ke-kuai-su-da-jian-jiao-cheng/">
+                <a href="/2021/01/25/hexo-github-pages-yi-jian-da-jian-bu-shu-bo-ke/">
                     <div class="card-image">
                         
-                        <img src="/images/Swiper5.jpg" class="responsive-img" alt="博客快速搭建教程">
+                        <img src="/images/hexo-github%20pages.jpeg" class="responsive-img" alt="hexo+GitHub Pages一键搭建部署博客">
                         
-                        <span class="card-title">博客快速搭建教程</span>
+                        <span class="card-title">hexo+GitHub Pages一键搭建部署博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -590,7 +592,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
                             </span>
                         <span class="publish-author">
                             
@@ -614,6 +616,70 @@
                     
                     <a href="/tags/git/">
                         <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/github-pages/">
+                        <span class="chip bg-color">github pages</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/24/mongodb-shu-ju-ku-de-shi-yong/">
+                    <div class="card-image">
+                        
+                        <img src="/images/MongoDB.jpg" class="responsive-img" alt="MongoDB数据库的使用">
+                        
+                        <span class="card-title">MongoDB数据库的使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MongoDB/" class="post-category">
+                                    MongoDB
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MongoDB/">
+                        <span class="chip bg-color">MongoDB</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
                     </a>
                     
                 </div>
